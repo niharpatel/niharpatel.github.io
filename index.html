@@ -6,21 +6,23 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="description" content="Dementia subtype is a difficult to diagnose. We've developed a machine learning methodology to help correctly predict dementia subtype based on the standard dementia questioneer and professional examination. Accessible by API and open to the public, we hope this model will encourage medical advances in dementia treatment.">
+    <meta name="author" content="James Jasper, Amir Ziai, Nihar Patel, Ji Yan">
 
-    <title>Predicting Dementia Types with Data</title>
+    <title>Dementia - ML</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <style>
-    body {
-        padding-top: 70px;
-        /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
-    }
-    </style>
+    <link href="css/agency.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -31,69 +33,342 @@
 
 </head>
 
-<body>
+<body id="page-top" class="index">
 
     <!-- Navigation -->
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
+            <div class="navbar-header page-scroll">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">Dementia Differential</a>
+                <a class="navbar-brand page-scroll" href="#page-top">Dementia Dx</a>
             </div>
+
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li>
-                        <a href="our_project.html">Our Project</a>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
                     </li>
                     <li>
-                        <a href="the_team.html">The Team</a>
+                        <a class="page-scroll" href="#project">Our Project</a>
                     </li>
                     <li>
-                        <a href="contact.html">Contact</a>
+                        <a class="page-scroll" href="#model">The Model</a>
                     </li>
                     <li>
-                        <a href="try_it.html">Try It!</a>
+                        <a class="page-scroll" href="#api">Github</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#team">Team</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#contact">Contact</a>
                     </li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
         </div>
-        <!-- /.container -->
+        <!-- /.container-fluid -->
     </nav>
 
-    <!-- Page Content -->
-    <div class="container">
-
-        <div class="row">
-            <div class="col-lg-12 text-center">
-                <h1>Predicting Dementia Subtypes with Data</h1>
-                <p class="lead">Dementia is a long running and complex condition encompassing various subtypes. While much progress has been made in diagnosing dementia, little progress has been made in curing the disease. We believe that this lack of progress is due to the difficulty in predicitng the eventual subtype of dementia. By applying data science and machine learning  techniques to this problem, we can help advance dementia research.</p>
-                <p class="lead">We believe that recent efforts to standardize data from dementia diagnoses through the completion of specific questioneers present an excellent opportunity to address this challenge. This new data greatly helps us futher develop our understanding of the disease and how the disease develops over time. We believe that with more accurate prediction of the eventual subtype diagnosis great advances can be made in dementia research eventually leading to the development of new treatments.</p>
-                <p class="lead">The information presented on this site is presented as-is and does not consistute medical recommendations or substitute for the diagnoses of a professional healthcare provider. We provide no warranty whatsoever and assume no liability for the use of this information. If you believe you are suffering from dementia, please seek professional medical help.</p>
-                <ul class="list-unstyled">
-                    <li><a href='privacy_policy.html'>Privacy and Data Policy</a></li>
-                    <li><a href='license.html'>License Information</a></li>
-                    <li>Copyright &copy; 2016</li>
-                </ul>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="intro-text">
+                <div class="intro-heading">Better Dementia Diagnoses Through Data</div>
+                <div class="intro-lead-in">"It has floated away <br>down a dark mythological river<br>
+whose name begins with an L as far as you can recall..." <br><br>- Billy Collins' 'Forgetfulness'<br></div>
+                <a href="#project" class="page-scroll btn btn-xl">Learn About Our Project</a>
+                <a href="#try_it" class="page-scroll btn btn-xl">Try It!</a>
             </div>
         </div>
-        <!-- /.row -->
+    </header>
 
-    </div>
-    <!-- /.container -->
+    <!-- Services Section -->
+    <section id="project">
+        <div class="container">
 
-    <!-- jQuery Version 1.11.1 -->
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <span class="fa-stack fa-4x">
+                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fa fa-laptop fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="service-heading">Data</h4>
+                    <p class="text-muted">15,000 Individuals, 475000 Records, 758 Variables</p>
+                </div>
+                <div class="col-md-4">
+                    <span class="fa-stack fa-4x">
+                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fa fa-tasks fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="service-heading">Predictive Model</h4>
+                    <p class="text-muted">Validated and Open Source</p>
+                </div>
+                <div class="col-md-4">
+                    <span class="fa-stack fa-4x">
+                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fa fa-globe fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="service-heading">Public API</h4>
+                    <p class="text-muted">Publically Accessible and Free to Use</p>
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h1 class="section-heading">Data Driven Differential Diagnosis</h2>
+                    <h2 class="section-subheading">A Massive Challenge</h2>
+                    <h3 class="section-subheading" align="left" font-family="Times New Roman" font-style="normal">Dementia is a long-term, progressive and debilitating disease that will result in the death of the patient. Despite its severity and widespread prevalence, little progress has been made in treating or preventing the disease. Nearly 15% of individuals older than 71 suffer from some form of dementia. While research has helped us gain a better understanding what happens during dementia, we still have not been able to make significant strides in treating or preventing dementia.</h3>
+
+                    <h2 class="section-subheading">Difficult Diagnoses</h2>
+                    <h3 class="section-subheading" align="left" font-family="Times New Roman" font-style="normal">Because dementia is not a singular disease, but rather an assortment of varied but distinct diseases with similar progressive symptoms, an individual who is being diagnosed may be in any stage of the disease and exhibiting any variety of symptoms. This results in difficulty determine the true underlying dementia subtype due to conflicting or non-existent symptoms across patients. We believe that because of this challenge, development of effective treatments for different dementia subtypes is much more difficult and slowed due to inaccurate diagnoses.</h3>
+
+                    <h2 class="section-subheading">Challenging Long-Term Care</h2>
+                    <h3 class="section-subheading" align="left" font-family="Times New Roman" font-style="normal">While Cancer and Heart Disease receive a great deal of attention, the annual cost of treating dementia exceeds both these diseases! According to the Lewy Body Dementia Association and the RAND corporation, dementia care costs between $157 billion and $215 billion. The majority of these costs come from the nature of needing constant care throughout the disease, which only increases as the disease worsens. By 2040, as the population ages and the majority of the baby boomers enter the high risk period for dementia, these costs could double. Barring a breakthrough, the healthcare system is ill prepared to deal with the increased cost of caring for these patients.</h3>
+
+                    <h2 class="section-subheading">Using Data to Deliver Better Outcomes</h2>
+                    <h3 class="section-subheading" align="left" font-family="Times New Roman" font-style="normal">The National Alzheimer's Coordinating Center has developed a standardized survey that is administered to patients entering one of their centers by specially trained staff members. Fortunately, the survey is standardized, covering the patient themselves, observed behavior by staff members, and interactions with family memebers and primary care staff. In total, over 750 different measures are collected for a given patient and approximately 15,000 individual patients have been assessed. However, the diagnosis of the disease still falls to specialists who must weigh the evidence for and against a given subtype.</h3>
+
+                    <h2 class="section-subheading">Identifying Early and Accurately</h2>
+                    <h3 class="section-subheading" align="left" font-family="Times New Roman" font-style="normal">Given the data available to use, we built a sophisticated machine learning classification model to help primary care physicians diagnose their patients from all the available data, rather than from only their personal knowledge. Additionally, some subtypes of dementia are relatively rare! A specialist may only see a few cases in their career. We've focused on the two distinct typesof dementia: Alzheimer's Disease and Behavioral Varient Frontotemporal Dementia to prove the use case and created an open API from which professionals can upload a patient survey and received the predicted classification.</h3>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Model Grid Section -->
+    <section id="model" class="bg-light-gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h1 class="section-heading">The Model</h2>
+                    <h2 class="section-subheading">Our Goal</h2>
+                    <h3 class="section-subheading" align="left" font-family="Times New Roman" font-style="normal">We set out to distinguish between Alzheimer's Disease (AD) and Behavioral Varient Frontotemporal Dementia (bvFTD) base on the data collected by the NACC: </h3>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="panel panel-default">
+                                <div class="panel-heading"><h3>Alzheimer's<br/> Disease</h3></div>
+                                    <div class="panel-body">
+                                    <ul>
+                                        <li><h4 style="text-align: left;">Alzheimer's is a type of dementia that causes problems with <em>memory</em>, thinking and behavior.</h4></li>
+                                        <li><h4 style="text-align: left;">Symptoms usually develop slowly and get worse over time, becoming severe enough to interfere with daily tasks.</h4></li>
+                                        <li><h4 style="text-align: left;">14,623 unique patients with 45,441 records.</h4></li>
+                                    </ul>
+                                    </div>
+                                </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="panel panel-default">
+                                <div class="panel-heading"><h3>Behavioral Varient Frontotemporal Dementia</h3></div>
+                                    <div class="panel-body">
+                                    <ul>
+                                        <li><h4 style="text-align: left;">Behavioral Variant FTD is characterized by prominent changes in <em>personality</em>, interpersonal relationships and conduct.</h4></li>
+                                        <li><h4 style="text-align: left;">Nerve cell loss is most prominent in areas that control judgment, empathy and foresight.</h4></li>
+                                        <li><h4 style="text-align: left;">889 unique patients with 2,114 records.</h4></li>
+                                    </ul>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+                    <h2 class="section-subheading">Training</h2>
+                    <h3 class="section-subheading" align="left" font-family="Times New Roman" font-style="normal">When approaching this problem, we realized that the way differential diagnoses are done for dementia patients are very distinct due to the multiple points of contact during the diagnosis process. With NACC's standardized surveys, whe had over 750 variables to choose from!</h3>
+                    <h3 class="section-subheading" align="left" font-family="Times New Roman" font-style="normal">Thanks to the expert knowledge of one of our team members, we were able to assess and eliminate some non-explanatory data. But this left us with a challenge of how to go about deciding the importance of the rest of our features. To do this, we turned to machine learning.</h3>
+                    <h3 class="section-subheading" align="left" font-family="Times New Roman" font-style="normal">Machine learning is a field of statistics that uses computer science and mathematical methods to analysis large data sets. Unlike humans, these statistical methods are very attuned to fine changes in the data, allowing them to pick up variations that are very detailed even when there is a lot of variation in the data.</h3>
+                    <h3 class="section-subheading" align="left" font-family="Times New Roman" font-style="normal">For example, because AD and bvFTD exhibit different incidence rates at diffferent ages, we can use this as one variable in our model.</h3>
+                    <h3 class="section-subheading" align="left" font-family="Times New Roman" font-style="normal">AMIR PLACEHOLDER FOR HIGH CHARTS</h3>
+                    <h3 class="section-subheading" align="left" font-family="Times New Roman" font-style="normal">The model can then loop through all the other possible variables to determine which ones have the largest impact on our prediction. The process looks much like constructing a tree, a sample of which is detailed below:</h3>
+                        <img src="img/decision_tree.png" alt=""></img>
+                    <h3 class="section-subheading" align="left" font-family="Times New Roman" font-style="normal"><br/>At the bottom of this tree are the leafs, which is where a decision is actually made as to which type of dementia we would classify a given case. Trees can go for several hundred steps over hundreds or thousands of variables before a decision is actually made! This makes this method very well suited for complicated data sets. We actually used a random forest model -- which is an emsemble method of decision trees with nearly 1000 branches, which made our model highly accurate while still providing the sensitivity we needed to identify particular cases.</h3>
+                    <h3 class="section-subheading" align="left" font-family="Times New Roman" font-style="normal"><br/>Once we had an idea of what our data looked like, we divided our data set into a training and test set. The training set was composed of about 80% of our data, while the test set was the remaining 20%. We then developed our model on the training set, and tried to use this model to predict the remaining 20%. This process allows us to ensure our results will generalize to other cases and we haven't overtrained our model to our training set. We trained a variety of models to test different types of models against each other to see which one gave the best results when we validated them.</h3>
+                    <h2 class="section-subheading">Validation</h2>
+                    <h3 class="section-subheading" align="left" font-family="Times New Roman" font-style="normal">To validate that our model was the best one possible, we used the ROC curve to understand how good our model compared with other models. A highly valid model will increase sharply then flatten out quickly. The result is a larger area under the curve, which we can then compare between different models. The best model will have the highest area under the curve, meaning it is more accurate than comparable models. We've shown the ROC curve for our final model below:</h3>
+                    <img src="img/roc_curve.png" alt=""></img>
+                    <h3 class="section-subheading" align="left" font-family="Times New Roman" font-style="normal"><br/>This process resulted in our selection of Random Forest Model, an ensemble method of decision trees, as the model to use for this classification problem.</h3>
+                </div>
+            </div>
+            
+        </div>
+        <div id="try_it" class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Try It</h2>
+                    <h3 class="section-subheading text-muted">REPLACEMENT SPOT FOR AMIR</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- API Section -->
+    <section id="api">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h1 class="section-heading">Github Information</h1>
+                    <h3 class="section-subheading text-muted">We've detailed and provided a pickled version of our model on our github page. You can find it below.</h3>
+                    <h2 class="section-subheading text-muted"><a href="#">See us on Github!</a></h2>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="bg-light-gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Our Team Members</h2>
+                    <h3 class="section-subheading" align="center" font-family="Times New Roman" font-style="normal">All Team Members are graduate students in their final semester of the Berkeley Master of Information and Data Science program. They can be contacted through their relevant social media links below.</h3>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="team-member">
+                        <img src="img/team/nihar.jpg" class="img-responsive img-circle" alt="">
+                        <h4>Nihar Patel</h4>
+                        <p class="text-muted"><em>Clinical Data Specialist</em></p>
+                        <p class="text-muted"><b>Stryker</b></p>
+
+                        <ul class="list-inline social-buttons">
+                            
+                        <!--
+                            <li><a href="#"><i class="fa fa-twitter"></i></a>
+                            </li>
+                            <li><a href="#"><i class="fa fa-facebook"></i></a>
+                            </li>                        -->
+                            <li><a href="https://www.linkedin.com/in/nihar-patel-ba31603a"><i class="fa fa-linkedin"></i></a>
+                            </li>
+                        
+                        </ul>
+
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="team-member">
+                        <img src="img/team/amir.jpg" class="img-responsive img-circle" alt="">
+                        <h4>Amir Ziai</h4>
+                        <p class="text-muted"><em>Data Scientist</em></p>
+                        <p class="text-muted"><b>Hart</b></p>
+                        
+
+                        <ul class="list-inline social-buttons">
+                            
+                        <!--
+                            <li><a href="#"><i class="fa fa-twitter"></i></a>
+                            </li>
+                            <li><a href="#"><i class="fa fa-facebook"></i></a>
+                            </li> -->
+                            <li><a href="https://www.linkedin.com/in/amirziai"><i class="fa fa-linkedin"></i></a>
+                            </li>
+                        
+                        </ul> 
+                        
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="team-member">
+                        <img src="img/team/ji.jpg" class="img-responsive img-circle" alt="">
+                        <h4>Ji Yan</h4>
+                        <p class="text-muted"><em>Engineer</em></p>
+                        <p class="text-muted"><b>Formerly with Uber</b></p>
+
+
+                        <ul class="list-inline social-buttons">
+                            
+                        <!--
+                            <li><a href="#"><i class="fa fa-twitter"></i></a>
+                            </li>
+                            <li><a href="#"><i class="fa fa-facebook"></i></a>
+                            </li>      -->
+                            <li><a href="https://www.linkedin.com/in/ji-yan-079a57a"><i class="fa fa-linkedin"></i></a>
+                            </li>
+                        
+                        </ul>
+
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="team-member">
+                        <img src="img/team/james.jpg" class="img-responsive img-circle" alt="">
+                        <h4>James Jasper</h4>
+                        <p class="text-muted"><em>Business Insights Analyst</em></p>
+                        <p class="text-muted"><b>Disney Consumer Products And Interactive Media Group</b></p>
+                        <ul class="list-inline social-buttons">
+                            <li><a href="https://www.linkedin.com/in/james-jasper-8842b726"><i class="fa fa-linkedin"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Special Thanks Aside -->
+    <aside class="clients">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Special Thanks To:</h2>
+                </div>
+            </div>
+            
+<!-- Needs to be developed including NAAC, UC Berkeley   -->
+            <div class="row">
+                <div class="col-md-6">
+                    <a href="https://www.alz.washington.edu/">
+                        <img src="img/logos/nacc.png" class="img-responsive img-centered" alt="">
+                    </a>
+                </div>
+                <div class="col-md-6">
+                    <a href="http://www.ischool.berkeley.edu/">
+                        <img src="img/logos/ischool.jpeg" class="img-responsive img-centered" alt="">
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </aside>
+    
+    <!-- Contact Section -->
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <span class="copyright">Copyright &copy; Dementia.ml 2016 -- Open Sourced Under the MIT License</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+ 
+
+    <!-- jQuery -->
     <script src="js/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="js/classie.js"></script>
+    <script src="js/cbpAnimatedHeader.js"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="js/agency.js"></script>
 
 </body>
 
