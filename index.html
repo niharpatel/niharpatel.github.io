@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Dementia subtype is a difficult to diagnose. We've developed a machine learning methodology to help correctly predict dementia subtype based on the standard dementia questioneer and professional examination. Accessible by API and open to the public, we hope this model will encourage medical advances in dementia treatment.">
+    <meta name="description" content="Dementia subtypes are difficult to diagnose. We've developed a machine learning methodology to help differentiate dementia subtypes based on nationally standardized dementia questionnaires and professional examinations. Accessible by API and open to the public, we hope this model will encourage medical advances in dementia treatment.">
     <meta name="author" content="James Jasper, Amir Ziai, Nihar Patel, Ji Yan">
 
     <title>Dementia - ML</title>
@@ -126,19 +126,19 @@ whose name begins with an L as far as you can recall..." <br><br>- Billy Collins
                 <div class="col-lg-12 text-center">
                     <h1 class="section-heading">Data Driven Differential Diagnosis</h2>
                     <h2 class="section-subheading">A Massive Challenge</h2>
-                    <h3 class="section-subheading" align="left" font-family="Times New Roman" font-style="normal">Dementia is a long-term, progressive and debilitating disease that will result in the death of the patient. Despite its severity and widespread prevalence, little progress has been made in treating or preventing the disease. Nearly 15% of individuals older than 71 suffer from some form of dementia. While research has helped us gain a better understanding what happens during dementia, we still have not been able to make significant strides in treating or preventing dementia.</h3>
+                    <h3 class="section-subheading" align="left" font-family="Times New Roman" font-style="normal">Dementia is a chronic, progressive, and debilitating disease. Nearly 15% of individuals older than 71 suffer from some form of dementia. Despite its severity and widespread prevalence, little progress has been made in its prevention or treatment. Research has helped us better understand the mechanics of the disease, but clinical trials have shown limited success.</h3>
 
                     <h2 class="section-subheading">Difficult Diagnoses</h2>
-                    <h3 class="section-subheading" align="left" font-family="Times New Roman" font-style="normal">Because dementia is not a singular disease, but rather an assortment of varied but distinct diseases with similar progressive symptoms, an individual who is being diagnosed may be in any stage of the disease and exhibiting any variety of symptoms. This results in difficulty determine the true underlying dementia subtype due to conflicting or non-existent symptoms across patients. We believe that because of this challenge, development of effective treatments for different dementia subtypes is much more difficult and slowed due to inaccurate diagnoses.</h3>
+                    <h3 class="section-subheading" align="left" font-family="Times New Roman" font-style="normal">Because dementia is an assortment of distinct processes with similar symptoms, an individual diagnosed with dementia could be suffering from any of multiple diseases, and could be in any stage of their particular disease. This makes it difficult to determine the exact dementia subtype. The challenge of diagnosis contributes to the challenge of effective treatments; the correct medicine for one disease and stage of illness could be different from the correct medicine for another.</h3>
 
                     <h2 class="section-subheading">Challenging Long-Term Care</h2>
-                    <h3 class="section-subheading" align="left" font-family="Times New Roman" font-style="normal">While Cancer and Heart Disease receive a great deal of attention, the annual cost of treating dementia exceeds both these diseases! According to the Lewy Body Dementia Association and the RAND corporation, dementia care costs between $157 billion and $215 billion. The majority of these costs come from the nature of needing constant care throughout the disease, which only increases as the disease worsens. By 2040, as the population ages and the majority of the baby boomers enter the high risk period for dementia, these costs could double. Barring a breakthrough, the healthcare system is ill prepared to deal with the increased cost of caring for these patients.</h3>
+                    <h3 class="section-subheading" align="left" font-family="Times New Roman" font-style="normal">While cancer and heart disease appropriately receive a great deal of attention, the annual cost of treating dementia exceeds both these diseases. Dementia care cost the United States $259 billion annually. The high burden comes from both the prevalence of the disease and the high needs of these patients. The burden often falls on family members who are tasked with taking care of an adult loved one who cannot take care of basic needs for themselves. By 2040, as the population ages and the majority of the baby boomers enter the high risk period for dementia, these costs could double. We can already see rising rates of dementia even while other major diseases fall. Barring a breakthrough, the healthcare system is ill prepared to deal with the increased cost of caring for these patients.</h3>
 
                     <h2 class="section-subheading">Using Data to Deliver Better Outcomes</h2>
-                    <h3 class="section-subheading" align="left" font-family="Times New Roman" font-style="normal">The National Alzheimer's Coordinating Center has developed a standardized survey that is administered to patients entering one of their centers by specially trained staff members. Fortunately, the survey is standardized, covering the patient themselves, observed behavior by staff members, and interactions with family memebers and primary care staff. In total, over 750 different measures are collected for a given patient and approximately 15,000 individual patients have been assessed. However, the diagnosis of the disease still falls to specialists who must weigh the evidence for and against a given subtype.</h3>
+                    <h3 class="section-subheading" align="left" font-family="Times New Roman" font-style="normal">The National Alzheimer's Coordinating Center (NACC) has developed a standardized survey that is administered to patients entering one of their centers by specially trained staff members. The survey elciits information directly from the patient, from staff members with the opportunity to test the patient, from family memebers who live with the patient, and from a physician who performs a standardized history and physical exam. In total, over 750 different measures are collected for a given patient. However, diagnosis of the disease still requires neurologist specialists who must weigh the evidence for and against a given dementia subtype to provide the final diagnosis.</h3>
 
                     <h2 class="section-subheading">Identifying Early and Accurately</h2>
-                    <h3 class="section-subheading" align="left" font-family="Times New Roman" font-style="normal">Given the data available to use, we built a sophisticated machine learning classification model to help primary care physicians diagnose their patients from all the available data, rather than from only their personal knowledge. Additionally, some subtypes of dementia are relatively rare! A specialist may only see a few cases in their career. We've focused on the two distinct typesof dementia: Alzheimer's Disease and Behavioral Varient Frontotemporal Dementia to prove the use case and created an open API from which professionals can upload a patient survey and received the predicted classification.</h3>
+                    <h3 class="section-subheading" align="left" font-family="Times New Roman" font-style="normal">We used the NAAC dataset to build a machine learning classification model to help primary care physicians diagnose their patients using standardized assessments. To prove this use case, we focused on two more prevalent subtypes of dementia: Alzheimer's Disease and Behavioral Varient Frontotemporal Dementia. We created an open API from which healthcare professionals can upload a standardized patient survey and receive the predicted classification.</h3>
 
                 </div>
             </div>
@@ -153,14 +153,14 @@ whose name begins with an L as far as you can recall..." <br><br>- Billy Collins
                 <div class="col-lg-12 text-center">
                     <h1 class="section-heading">The Model</h2>
                     <h2 class="section-subheading">Our Goal</h2>
-                    <h3 class="section-subheading" align="left" font-family="Times New Roman" font-style="normal">We set out to distinguish between Alzheimer's Disease (AD) and Behavioral Varient Frontotemporal Dementia (bvFTD) base on the data collected by the NACC: </h3>
+                    <h3 class="section-subheading" align="left" font-family="Times New Roman" font-style="normal">We set out to distinguish between Alzheimer's Disease (AD) and Behavioral Varient Frontotemporal Dementia (bvFTD) based on the data collected by the NACC: </h3>
                     <div class="row">
                         <div class="col-md-6">
                             <div class="panel panel-default">
                                 <div class="panel-heading"><h3>Alzheimer's<br/> Disease</h3></div>
                                     <div class="panel-body">
                                     <ul>
-                                        <li><h4 style="text-align: left;">Alzheimer's is a type of dementia that causes problems with <em>memory</em>, thinking and behavior.</h4></li>
+                                        <li><h4 style="text-align: left;">Alzheimer's is a type of dementia that causes problems with <em>memory</em>, thinking, and behavior.</h4></li>
                                         <li><h4 style="text-align: left;">Symptoms usually develop slowly and get worse over time, becoming severe enough to interfere with daily tasks.</h4></li>
                                         <li><h4 style="text-align: left;">14,623 unique patients with 45,441 records.</h4></li>
                                     </ul>
@@ -172,8 +172,8 @@ whose name begins with an L as far as you can recall..." <br><br>- Billy Collins
                                 <div class="panel-heading"><h3>Behavioral Varient Frontotemporal Dementia</h3></div>
                                     <div class="panel-body">
                                     <ul>
-                                        <li><h4 style="text-align: left;">Behavioral Variant FTD is characterized by prominent changes in <em>personality</em>, interpersonal relationships and conduct.</h4></li>
-                                        <li><h4 style="text-align: left;">Nerve cell loss is most prominent in areas that control judgment, empathy and foresight.</h4></li>
+                                        <li><h4 style="text-align: left;">Behavioral Variant FTD is characterized by prominent changes in <em>personality</em>, interpersonal relationships, and conduct.</h4></li>
+                                        <li><h4 style="text-align: left;">This often occurs in younger patients comapred to Alzheimer's disease.</h4></li>
                                         <li><h4 style="text-align: left;">889 unique patients with 2,114 records.</h4></li>
                                     </ul>
                                     </div>
